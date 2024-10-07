@@ -14,21 +14,28 @@
 </head>
 <body>
     <header>
-        <h1></h1>
-        <h1>Receitas do Japa</h1>
     </header>
     <main>
         <img src="Imagens/Receitas.jpg" alt="receitas image">
         <br>
-        <h2>Selecione uma das receitas</h2>
-        <a href="./tonkatsu.html">Tonkatsu</a>
-        <br>
-        <a href="./karagee.html">Karagee</a>
-        <br>
-        <a href="./gyoza.html">Gyoza</a>
+        <h2>Receitas do Japa</h2>
+        <label for="receitas">Escolha uma das receitas:</label>
+        <select id="receitas" name="receitaslist">
+            <option value="Tonkatsu">Tonkatsu</option>
+            <option value="Karaage">Karaage</option>
+            <option value="Gyoza">Gyoza</option>
+        </select>
+        <input type="button" value="Pesquisar" onclick="redirecionar()">
+        
+        <script>
+        function redirecionar() {
+            const receitaSelecionada = document.getElementById('receitas').value;
+            window.location.href = receitaSelecionada + '.html';
+        }
+        </script>
     </main>
     <footer>
-        <p>2024 - Receitas do Japa. Todos os direitos reservados. Entre em contato por: knjsato1@gmail.com</p>
+    <p>2024 - Receitas do Japa. Estudos de front-end. Entre em contato por: knjsato1@gmail.com</p>
     </footer>
 </body>
 </html>
